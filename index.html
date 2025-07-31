@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABHI | ABHIJITH R NAIR - Mechanical Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional inline styles for certifications */
+        .certifications-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+        }
+        
+        .certifications-box {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            max-width: 300px;
+        }
+        
+        .certifications-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .certifications-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Remove unwanted spacing between sections */
+        section {
+            padding: 60px 0;
+        }
+        
+        section:not(:first-child) {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header/Navbar -->
+    <header class="header">
+        <a href="#" class="logo">ABHI</a>
+        
+        <i class="fas fa-bars" id="menu-icon"></i>
+        
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certifications">Certificates</a>
+            <a href="#contact">Contact</a>
+            <button id="theme-toggle" class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hello, It's Me</h3>
+            <h1>Abhijith R Nair</h1>
+            <div class="typing-text">
+                <span id="typed-text"></span>
+            </div>
+            <div class="social-media">
+                <a href="http://www.linkedin.com/in/abhijith-r-nair-808695290" target="_blank" rel="noopener">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:arnair181@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/p/CqoCFeuhgCz/?igsh=NTEzaGVreng3MHli" target="_blank" rel="noopener">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="cta-button" style="margin-top: 2rem;">
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="oval-container">
+                <img src="assets/proo.jpg" alt="Abhijith R Nair" class="profile-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about fade-in" id="about">
+        <div class="about-img">
+            <img src="assets/aboutt.png" alt="About">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">About <span style="color: var(--main-color);">Me</span></h2>
+            <h3>Dynamic Mechanical Engineer</h3>
+            <p>
+                Mechanical Engineer with 1+ year of experience in construction and service projects.
+                Strong in mechanical principles, safety standards, and project execution.
+                Delivers quality outcomes through precision and reliability.
+                Adapts quickly to on-site challenges and technical demands.
+            </p>
+            <p>
+                Collaborates well across teams to solve complex issues.
+                Applies critical thinking and innovative approaches effectively.
+                Ensures timely delivery while maintaining high standards.
+                Focused on practical, real-world engineering solutions.
+            </p>
+            <p>
+                Skilled in technical documentation and system management.
+                Enhances client satisfaction through clear communication.
+                Supports long-term performance with detailed reporting.
+                Driven to contribute to impactful engineering projects.
+            </p>
+            
+            <div class="about-details">
+                <div class="detail">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>B Tech in Mechanical Engineering</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-envelope"></i>
+                    <span>arnair181@gmail.com</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-phone"></i>
+                    <span>+919947843949</span>
+                </div>
+                <div class="detail">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kerala, India</span>
+                </div>
+            </div>
+            <a href="#home" class="btn">Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills fade-in" id="skills">
+        <h2 class="heading">My <span style="color: var(--main-color);">Skills</span></h2>
+        <div class="skills-container">
+            <div class="skills-box">
+                <i class="fas fa-cogs"></i>
+                <h3>Technical Expertise</h3>
+                <ul class="skills-list">
+                    <li>Mechanical Design & Drafting</li>
+                    <li>CAD (SolidWorks, AutoCAD)</li>
+                    <li>Finite Element Analysis (FEA)</li>
+                    <li>Thermodynamics & Fluid Mechanics</li>
+                    <li>Performance Tuning</li>
+                    <li>Project Design</li>
+                </ul>
+            </div>
+            
+            <div class="skills-box">
+                <i class="fas fa-industry"></i>
+                <h3>Operations & Management</h3>
+                <ul class="skills-list">
+                    <li>Operation Management</li>
+                    <li>Project Management</li>
+                    <li>Timelines & Scheduling</li>
+                    <li>Quality Control Systems</li>
+                    <li>Lean Manufacturing</li>
+                    <li>Six Sigma Methodologies</li>
+                </ul>
+            </div>
+            
+            <div class="skills-box">
+                <i class="fas fa-users"></i>
+                <h3>Professional Skills</h3>
+                <ul class="skills-list">
+                    <li>Effective Communication</li>
+                    <li>Team Collaboration</li>
+                    <li>Critical Thinking</li>
+                    <li>Problem Solving</li>
+                    <li>Technical Documentation</li>
+                    <li>Client Relations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects fade-in" id="projects">
+        <h2 class="heading">My <span style="color: var(--main-color);">Projects</span></h2>
+        <div class="projects-container">
+            <div class="projects-box">
+                <div class="project-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="project-content">
+                    <img src="assets/project11.png" alt="Mechanical Design Project" style="width: 300px; height: auto;">
+                    <div class="projects-layer">
+                        <h4>DESIGN AND FABRICATION OF EYE BLINK BASED AUTOMATIC PNEUMATIC BUMPER AND BREAKING SYSTEM</h4>
+                        <p>Uses eye blink detection to activate an automatic braking and bumper deployment mechanism in emergency situations</p>
+                        <a href="project.html" class="btn">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications fade-in" id="certifications">
+    <h1 class="heading">My <span style="color: var(--main-color);">Certifications</span></h1>
+        <div class="certifications-container">
+            <div class="certifications-box">
+                <img src="assets/certi1.png" alt="Certification 1">
+            </div>
+            <div class="certifications-box">
+                <img src="assets/certi4.jpg" alt="Certification 2">
+            </div>
+            <div class="certifications-box">
+                <img src="assets/certi3.jpg" alt="Certification 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact fade-in" id="contact">
+        <h2 class="heading">Contact <span style="color: var(--main-color);">Me</span></h2>
+        <form id="contact-form">
+            <div class="input-box">
+                <input type="text" name="fullName" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-box">
+                <input type="number" name="mobile" placeholder="Mobile Number">
+                <input type="text" name="subject" placeholder="Email Subject">
+            </div>
+            <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            <input type="submit" value="Send Message" class="btn">
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by ABHIJITH R NAIR | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fas fa-arrow-up"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Blink Based Automatic Pneumatic Bumper and Braking System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Internal CSS for Project Page */
+        :root {
+            --bg-color: #081b29;
+            --second-bg-color: #112e42;
+            --text-color: #ededed;
+            --main-color: #00abf0;
+            --accent-color: #ff6b6b;
+            --card-bg: #0a192f;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 60px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .project-header {
+            position: relative;
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--second-bg-color) 0%, rgba(0,0,0,0.3) 100%);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--main-color);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 1.3;
+        }
+
+        .project-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            padding: 0 1rem;
+        }
+
+        /* Back Button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            color: var(--main-color);
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .back-btn i {
+            margin-right: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background: rgba(0, 171, 240, 0.1);
+        }
+
+        .back-btn:hover i {
+            transform: translateX(-5px);
+        }
+
+        /* Project Content */
+        .project-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Description Section */
+        .project-description {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 3px solid var(--main-color);
+        }
+
+        .project-description h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--main-color);
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .project-description h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+        }
+
+        .project-description p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Features List */
+        .project-features {
+            margin-bottom: 2rem;
+        }
+
+        .project-features ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-features li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 2rem;
+            line-height: 1.6;
+        }
+
+        .project-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        /* Specifications */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .spec-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 3px solid var(--main-color);
+        }
+
+        .spec-item strong {
+            color: var(--main-color);
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Gallery Section */
+        .project-gallery {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 3px solid var(--accent-color);
+            margin-top: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            aspect-ratio: 16/9;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 171, 240, 0.3);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+
+        /* Project Footer */
+        .project-footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            background: var(--main-color);
+            color: var(--bg-color);
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(0, 171, 240, 0.3);
+            margin: 0.5rem;
+        }
+
+        .btn i {
+            margin-right: 0.5rem;
+        }
+
+        .btn:hover {
+            background: #0088cc;
+            box-shadow: 0 6px 20px rgba(0, 171, 240, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--main-color);
+            border: 2px solid var(--main-color);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 171, 240, 0.1);
+        }
+
+        /* Technical Details Section */
+        .technical-details {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border-top: 3px solid var(--accent-color);
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            .project-header h1 {
+                font-size: 2rem;
+            }
+            
+            .project-description, .project-gallery, .technical-details {
+                padding: 1.5rem;
+            }
+            
+            .specs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .project-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .project-header p {
+                font-size: 1rem;
+            }
+            
+            .back-btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+
+        <div class="project-header">
+            <h1>Design and Fabrication of Eye Blink Based Automatic Pneumatic Bumper and Braking System</h1>
+            <p>An innovative automotive safety system that uses eye blink detection to activate automatic braking and bumper deployment in emergency situations</p>
+        </div>
+
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>This project aims to enhance automotive safety by developing an intelligent system that uses eye blink detection to activate an automatic braking and bumper deployment mechanism in emergency situations. The system is particularly beneficial in preventing accidents caused by driver drowsiness or sudden loss of attention.</p>
+                
+                <div class="project-features">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><strong>Real-time Drowsiness Detection:</strong> Uses IR-based eye blink sensor to monitor driver alertness continuously</li>
+                        <li><strong>Automatic Braking System:</strong> Engages brakes when prolonged eye closure (>2 sec) is detected</li>
+                        <li><strong>Pneumatic Bumper Deployment:</strong> Extends a shock-absorbing bumper to minimize collision impact</li>
+                        <li><strong>Multi-Stage Safety Alert:</strong> Warns driver via buzzer/vibration before activating brakes & bumper</li>
+                        <li><strong>False Trigger Prevention:</strong> Adjustable delay and sensitivity settings to avoid unnecessary activation</li>
+                        <li><strong>Low-Cost & Scalable:</strong> Uses Arduino-based control for easy integration in most vehicles</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="technical-details">
+                <h2>Technical Specifications</h2>
+                <div class="specs-grid">
+                    <div class="spec-item">
+                        <strong>Controller</strong>
+                        Arduino Uno (ATmega328P, 16MHz, 32KB Flash)
+                    </div>
+                    <div class="spec-item">
+                        <strong>Eye Blink Sensor</strong>
+                        IR sensor with 10-80cm detection range
+                    </div>
+                    <div class="spec-item">
+                        <strong>Pneumatic System</strong>
+                        12V DC compressor, 100psi max pressure
+                    </div>
+                    <div class="spec-item">
+                        <strong>Activation Time</strong>
+                        <200ms response time from detection to action
+                    </div>
+                    <div class="spec-item">
+                        <strong>Power Supply</strong>
+                        12V DC vehicle battery with voltage regulation
+                    </div>
+                    <div class="spec-item">
+                        <strong>Alert System</strong>
+                        85dB buzzer with vibration motor
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-gallery">
+                <h2>Project Gallery</h2>
+                <p>Visual documentation of our design process, prototypes, and final implementation</p>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/proj1.jpg" alt="Initial Design Concept">
+                        <div class="gallery-caption">Initial Design Concept</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/proj2.jpg" alt="Prototype Assembly">
+                        <div class="gallery-caption">Prototype Assembly</div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/cir.jpg" alt="Circuit Diagram">
+                        <div class="gallery-caption">Circuit Diagram</div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+        <div class="project-footer">
+            <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Contact About This Project</a>
+            <a href="#" class="btn btn-outline"><i class="fas fa-file-pdf"></i> Download Project Report</a>
+        </div>
+    </div>
+</body>
+</html>
